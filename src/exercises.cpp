@@ -20,7 +20,6 @@ void exercise_1(string s1, string s2, string s3) {
 }
 
 void exercise_2(double A, double B, double C) {
-  double A, B, C;
 	cout<<"Resuelve la siguiente ecuacion cuadratica: Ax^2 + Bx + C"<<endl;
 	cout<<"Introduzca los valores de A, B y C"<<endl;
 	cin>>A>>B>>C;
@@ -38,15 +37,13 @@ void exercise_2(double A, double B, double C) {
 }
 
 void exercise_3(int a, int b) {
-  int A, B;
-	
 	cout<<"Introduzca el numerador: "; 
-	cin>>A;
+	cin>>a;
 	cout<<"Introduzca el denominador: ";
-	cin>>B;
+	cin>>b;
 	
-	if (B != 0){
-		int division = A / B;
+	if (b != 0){
+		int division = a / b;
 		cout<<"El resultado de la division es "<<division<<".";
 	}
 	else {
