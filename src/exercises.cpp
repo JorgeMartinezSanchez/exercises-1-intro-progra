@@ -19,7 +19,20 @@ void exercise_1(string s1, string s2, string s3) {
 }
 
 void exercise_2(double A, double B, double C) {
-  // TODO: YOUR CODE HERE
+  cout<<"Resuelve la siguiente ecuacion cuadratica: Ax^2 + Bx + C"<<endl;
+	cout<<"Introduzca los valores de A, B y C"<<endl;
+	cin>>A>>B>>C;
+	
+	double discri = pow(B, 2) - 4 * A * C;
+	if (discri < 0){
+		cout<<"No hay numeros reales en la ecuacion";
+	}
+	else {
+		double raiz1 = (-B + sqrt(discri)) / (2 * A);
+		double raiz2 = (-B - sqrt(discri)) / (2 * A);
+		
+		cout<<"Los resultados son: "<<raiz1<<" y "<<raiz2;
+	}
 }
 
 void exercise_3(int a, int b) {
