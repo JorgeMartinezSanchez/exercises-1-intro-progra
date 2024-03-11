@@ -5,16 +5,53 @@
 using namespace std;
 
 void exercise_1(string s1, string s2, string s3) {
-  // TODO: YOUR CODE HERE
-  cout << "a" << endl;
+  string s1, s2, s3;
+	s1 = "fortnite";
+	s2 = "fuck";
+	s3 = "fzst";
+	if (s1 < s2 && s1 < s3){
+		cout<<s1;
+	} else if (s2 < s1 && s2 < s3){
+		cout<<s2;
+	}
+	else{
+		cout<<s3;
+	}
 }
 
 void exercise_2(double A, double B, double C) {
-  // TODO: YOUR CODE HERE
+  double A, B, C;
+	cout<<"Resuelve la siguiente ecuacion cuadratica: Ax^2 + Bx + C"<<endl;
+	cout<<"Introduzca los valores de A, B y C"<<endl;
+	cin>>A>>B>>C;
+	
+	double discri = pow(B, 2) - 4 * A * C;
+	if (discri < 0){
+		cout<<"No hay numeros reales en la ecuacion";
+	}
+	else {
+		double raiz1 = (-B + sqrt(discri)) / (2 * A);
+		double raiz2 = (-B - sqrt(discri)) / (2 * A);
+		
+		cout<<"Los resultados son: "<<raiz1<<" y "<<raiz2;
+	}
 }
 
 void exercise_3(int a, int b) {
-  // TODO: YOUR CODE HERE
+  int A, B;
+	
+	cout<<"Introduzca el numerador: "; 
+	cin>>A;
+	cout<<"Introduzca el denominador: ";
+	cin>>B;
+	
+	if (B != 0){
+		int division = A / B;
+		cout<<"El resultado de la division es "<<division<<".";
+	}
+	else {
+		cout<<"No es posible dividir entre 0.";
+	}
 }
 
 void exercise_4(double n, double a, double b, double x, double y) {
