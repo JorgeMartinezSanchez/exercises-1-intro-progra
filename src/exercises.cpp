@@ -19,7 +19,7 @@ void exercise_1(string s1, string s2, string s3) {
 }
 
 void exercise_2(double A, double B, double C) {
-  cout<<"Resuelve la siguiente ecuacion cuadratica: Ax^2 + Bx + C"<<endl;
+    cout<<"Resuelve la siguiente ecuacion cuadratica: Ax^2 + Bx + C"<<endl;
 	cout<<"Introduzca los valores de A, B y C"<<endl;
 	cin>>A>>B>>C;
 	
@@ -103,7 +103,7 @@ void exercise_6(int day) {
 	}
 }
 
-void exercise_7(double r, sphere_area) {
+void exercise_7(double r, double sphere_area) {
     cout<<"Introduce the radius to calcule the sphere area: ";
 	cin>>r;
 	
@@ -116,7 +116,7 @@ void exercise_7(double r, sphere_area) {
 	}
 }
 
-void exercise_8(long int seconds, minutes, hours) {
+void exercise_8(long int seconds, long int minutes, long int hours) {
 	cout<<"Introduce seconds: ";
 	cin>>seconds;
 	
@@ -133,7 +133,7 @@ void exercise_8(long int seconds, minutes, hours) {
 	}
 }
 
-string exercise_9(string s1, s2, s3, s4, s5) {
+string exercise_9(string s1, string s2, string s3, string s4, string s5) {
 	cout<<"Introduce 5 words"<<endl;
 	cout<<"Word 1: "; cin>>s1;
 	cout<<"Word 2: "; cin>>s2;
@@ -173,7 +173,6 @@ int exercise_10(int a, int b) {
 }
 
 string exercise_11(int collar) {
-	int collar;
 	cout<<"Introduce el collar de Fibonacci (en numeros)"<<endl;
 	cin>>collar;
 	
