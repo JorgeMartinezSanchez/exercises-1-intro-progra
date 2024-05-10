@@ -41,7 +41,7 @@ void exercise_3(int a, int b) {
 	cout<<"Introduzca el denominador: ";
 	cin>>b;
 	
-	if (b != 0 && a != 0){
+	if (b != 0){
 		int division = a / b;
 		cout<<"El resultado de la division es "<<division<<".";
 	}
@@ -134,53 +134,37 @@ void exercise_8(long int seconds, long int minutes, long int hours) {
 }
 
 string exercise_9(string s1, string s2, string s3, string s4, string s5) {
-	cout<<"Introduce 5 words"<<endl;
-	cout<<"Word 1: "; cin>>s1;
-	cout<<"Word 2: "; cin>>s2;
-	cout<<"Word 3: "; cin>>s3;
-	cout<<"Word 4: "; cin>>s4;
-	cout<<"Word 5: "; cin>>s5;
-	
-	cout<<"\n"<<s1[0];
-	cout<<s2[0];
-	cout<<s3[0];
-	cout<<s4[0];
-	cout<<s5[0]<<"\n";
+	cin>>s1>>s2>>s3>>s4>>s5;
 	
 	if (s1[0]==s5[0]){
-		cout<<"\nHemos encontrado algo!";
+		return "Hemos encontrado algo!";
 	}
 	else {
-		cout<<"\nAun sin suerte.";
+		return "Aun sin suerte.";
 	}
 }
 
 int exercise_10(int a, int b) {
-	cout<<"introduzca los valores de \"a\" y \"b\""<<endl;
-	cout<<"a: "; cin>>a;
-	cout<<"b: "; cin>>b;
+	cin>>a>>b;
 	
 	if (a>0 && b>0){
 		int resultado_ab, resultado_x2;
 		resultado_ab = a + b;
 		resultado_x2 = resultado_ab * 2;
-	    cout<<"El resultado es "<<resultado_x2<<".";
+	    return resultado_x2;
 	}
 	else {
-		cout<<"No se introduce numeros negativos.";
+		return 0;
 	}
 	
 }
 
 string exercise_11(int collar) {
-	cout<<"Introduce el collar de Fibonacci (en numeros)"<<endl;
-	cin>>collar;
-	
 	if (collar==11235813){
-		cout<<"Se encontro a fibonacci";
+		return "Se encontro a fibonacci";
 	}
 	else {
-		cout<<"no es fibonacci";
+		return "no es fibonacci";
 	}
 }
 
@@ -192,9 +176,6 @@ void exercise_12(string color1, int numb1,
 }
 
 string exercise_13(int age, int years_of_experience) {
-	cout<<"Please introduce you age: ";
-	cin>>age;
-	
 	if (age>=18){
 		char position;
 		cout<<"\nChoose a position:"<<endl;
@@ -203,54 +184,49 @@ string exercise_13(int age, int years_of_experience) {
 		cout<<"c) senior project director."<<endl;
 		cout<<"\n"; cin>>position;
 		if (position == 'a'){
-			cout<<"You have been signed as the project coordinator.";
+			return "You have been signed as the project coordinator.";
 		}
 		else if (position == 'b'){
 			cout<<"How many years of experience have you acquired?"<<endl;
 			cin>>years_of_experience;
 			if (years_of_experience >= 3){
-				cout<<"You count with the enough experience to be suitable for this job."<<endl;
-				cout<<"You have been signed as the project director.";
+				return "You count with the enough experience to be suitable for this job.\nYou have been signed as the project director.";
 			}
 			else {
-				cout<<"I'm sorry, but you don't count with the exprience to be suitable for this job.";
+				return "I'm sorry, but you don't count with the exprience to be suitable for this job.";
 			}
 		}
 		else if (position == 'c'){
 			cout<<"How many years of experience have you acquired?"<<endl;
 			cin>>years_of_experience;
 			if (years_of_experience >= 5){
-				cout<<"You count with the enough experience to be suitable for this job."<<endl;
-				cout<<"You have been signed as the senior project director.";
+				return "You count with the enough experience to be suitable for this job.\nYou have been signed as the senior project director.";
 			}
 			else {
-				cout<<"I'm sorry, but you don't count with the exprience to be suitable for this job.";
+				return "I'm sorry, but you don't count with the exprience to be suitable for this job.";
 			}
 		}
 		else {
-			cout<<"Not an option.";
+			return "Not an option.";
 		}
 	}
 	else {
-		cout<<"I'm sorry, you are not of legal age.";
+		return "I'm sorry, you are not of legal age.";
 	}
 }
 
 string exercise_14(int number_of_docs) {
-	cout<<"Introduce the number of docs: ";
-	cin>>number_of_docs;
-	
 	if (number_of_docs == 0){
-		cout<<"There aren't any documents";
+		return "There aren't any documents";
 	}
 	else if (number_of_docs == 1){
-		cout<<"There is "<<number_of_docs<<" document.";
+		return "There is " + to_string(number_of_docs) + " document.";
 	}
 	else if (number_of_docs > 1){
-		cout<<"There are "<<number_of_docs<<" documents.";
+		return "There are " + to_string(number_of_docs) + " documents.";
 	}
 	else {
-		cout<<"Absurd number";
+		return "Absurd number";
 	}
 }
 
