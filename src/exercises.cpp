@@ -31,7 +31,7 @@ void exercise_2(double A, double B, double C) {
 		double raiz1 = (-B + sqrt(discri)) / (2 * A);
 		double raiz2 = (-B - sqrt(discri)) / (2 * A);
 		
-		cout<<"Los resultados son: "<<raiz1<<" y "<<raiz2;
+		cout<<"Los resultados son: "<<raiz1<<" y "<<raiz2<<".";
 	}
 }
 
@@ -103,12 +103,12 @@ void exercise_6(int day) {
 	}
 }
 
-void exercise_7(double r, double sphere_area) {
+void exercise_7(double r) {
     cout<<"Introduce the radius to calcule the sphere area: ";
 	cin>>r;
 	
 	if (r>=0){
-		sphere_area = 4 * M_PI * pow(r, 2);
+		double sphere_area = 4 * M_PI * pow(r, 2);
 		cout<<"The area of the sphere is "<<sphere_area<<".";
 	}
 	else{
@@ -116,14 +116,12 @@ void exercise_7(double r, double sphere_area) {
 	}
 }
 
-void exercise_8(long int seconds, long int minutes, long int hours) {
-	cout<<"Introduce seconds: ";
+void exercise_8(long int seconds) {
 	cin>>seconds;
-	
 	if(seconds>=0){
-		minutes = seconds / 60;
+		long int minutes = seconds / 60;
 		seconds = seconds % 60;
-		hours = minutes / 60;
+		long int hours = minutes / 60;
 		minutes = minutes % 60;
 		
 		cout<<hours<<":"<<minutes<<":"<<seconds;
@@ -145,8 +143,6 @@ string exercise_9(string s1, string s2, string s3, string s4, string s5) {
 }
 
 int exercise_10(int a, int b) {
-	cin>>a>>b;
-	
 	if (a>0 && b>0){
 		int resultado_ab, resultado_x2;
 		resultado_ab = a + b;
@@ -159,8 +155,8 @@ int exercise_10(int a, int b) {
 	
 }
 
-string exercise_11(int collar) {
-	if (collar==11235813){
+string exercise_11(int number) {
+	if (number==11235813){
 		return "Se encontro a fibonacci";
 	}
 	else {
@@ -182,6 +178,7 @@ string exercise_13(int age, int years_of_experience) {
 		cout<<"\na) project coordinator."<<endl;
 		cout<<"b) project director."<<endl;
 		cout<<"c) senior project director."<<endl;
+		cout<<"-----------------------------"<<endl;
 		cout<<"\n"; cin>>position;
 		if (position == 'a'){
 			return "You have been signed as the project coordinator.";
@@ -243,7 +240,9 @@ void exercise_15(int a, int b, int c) {
     cout<<"\nValores tras la permutacion: a="<<a<<", b="<<b<<", c="<<c;
 }
 
-void exercise_16(int debut, int fin, int hora_de_alquiler, int precio) {
+void exercise_16(int debut, int fin) {
+	int hora_de_alquiler;
+	int precio;
 	cout<<"Hola, renta tu bici las 24 horas del dia!"<<endl;
 	cout<<"Renta tu bicicleta en los siguientes horarios que ves en pantalla:"<<endl;
 	cout<<"a) De 00:00 a 07:00 y de 17:00 a 24:00: 1 bs por hora"<<endl;
